@@ -1,0 +1,53 @@
+{
+	"pages": [ 
+		{
+			"path" : "pages/task/task",
+			"style" : 
+			{
+				"navigationBarTitleText" : "",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path" : "pages/statistics/statistics",
+			"style" : 
+			{
+				"navigationBarTitleText" : "",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "uni-app",
+				"navigationStyle": "custom"
+			}
+		}
+	],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "uni-app",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8"
+	},
+	"uniIdRouter": {},
+	"tabBar": {
+		    "color": "#718096",
+		    "selectedColor": "#2979FF",
+		    "borderStyle": "black",
+		    "backgroundColor": "#F8F8F8",
+		    "list": [{
+		        "pagePath": "pages/task/task",
+		        "iconPath": "static/task.png",
+		        "selectedIconPath": "/static/task_active.png",
+	
+		        "text": "task"
+		    },{
+		        "pagePath": "pages/statistics/statistics",
+		        "iconPath": "static/statistics.png",
+		        "selectedIconPath": "static/statistics_active.png",
+			
+		        "text": "statistics"
+		    }]
+	}
+}
