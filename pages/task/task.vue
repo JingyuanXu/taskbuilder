@@ -293,14 +293,14 @@
 				try {
 				    var value = uni.getStorageSync('key');
 				    if (value) {
-				        console.log('获取到值getStoreFn value', value); 
+				        console.log('getStoreFn value', value); 
 						this.hasValueInit(JSON.parse(value) || {})
 				    } else {
-						console.log('没有值')
+						console.log('no value')
 						this.firstInit()
 					}
 				} catch (e) {
-					console.log('异常')
+					console.log('exception')
 			
 					this.firstInit()
 				    console.error(e);
