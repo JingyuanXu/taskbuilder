@@ -59,12 +59,12 @@
 					</view>
 					
 					<view class="popupitem">
-						<text class="left">score:</text>
+						<text class="left">Input Clarity Rating:</text>
 						<uni-rate :max="5" v-model="operateItem.rate" :value="operateItem.rate" @change="(event) => {changeRate(operateItem, event)}"/>
 					</view>
 					
 					<view class="popupitem">
-						<text class="left">details:</text>
+						<text class="left">Patient Input Comment:</text>
 						<textarea v-model="operateItem.detail" placeholder="Please enter details" auto-height />
 					</view>
 					
@@ -237,35 +237,35 @@
 				let tempObj = {
 						range: [
 							{
-								value: 'Mathematics',
-								text: 'Mathematics',
+								value: 'Telehealth Consent Session',
+								text: 'Telehealth Consent Session',
 								subTaskList: [
 									{
-										  taskName: 'Statistics',
+										  taskName: 'State Location Confirmation',
 										  rate: 3,
 										  id: Date.now(),
-										  detail: 'details',
-										  cate: 'Statistics'
+										  detail: 'Patient Input Comment',
+										  cate: 'State Location Confirmation'
 									},
 									{
-										  taskName: 'Algebra',
+										  taskName: 'Age Declaration',
 										  rate: 2,
 										  id: Date.now(),
-										  detail: 'details',
-										  cate: 'Algebra'
+										  detail: 'Patient Input Comment',
+										  cate: 'Age Declaration'
 									},
 									{
-										  taskName: 'Geometry',
+										  taskName: 'Health Issue Description',
 										  rate: 4,
 										  id: Date.now(),
-										detail: 'details',
-										cate: 'Geometry'
+										detail: 'Patient Input Comment',
+										cate: 'Health Issue Description'
 									},
 								],
 								subTaskCateList: [
-									{ value: "Statistics", text: "Statistics" },
-									{ value: "Algebra", text: "Algebra" },
-									{ value: "Geometry", text: "Geometry" },
+									{ value: "State Location Confirmation", text: "State Location Confirmation" },
+									{ value: "Age Declaration", text: "Age Declaration" },
+									{ value: "Health Issue Description", text: "Health Issue Description" },
 								]
 							}
 						]

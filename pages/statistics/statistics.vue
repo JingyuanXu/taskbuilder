@@ -11,7 +11,7 @@
 			  :clear="false"
 			  @change="selectChange"
 			></uni-data-select>
-			<text style="margin-left: 40rpx;width: 400rpx">Total score: {{allScore.toFixed(0)}}%</text>
+			<text style="margin-left: 40rpx;width: 400rpx">Total Input Clarity Rating: {{allScore.toFixed(0)}}%</text>
 		</view>
 		<view class="nodata" v-if="!range.length">
 			<image src="/static/nodata.png" mode=""></image>
@@ -115,35 +115,35 @@
 				let tempObj = {
 						range: [
 							{
-								value: 'Mathematics',
-								text: 'Mathematics',
+								value: 'Telehealth Consent Session',
+								text: 'Telehealth Consent Session',
 								subTaskList: [
 									{
-										  taskName: 'Statistics',
+										  taskName: 'State Location Confirmation',
 										  rate: 3,
 										  id: Date.now(),
-										  detail: 'details',
-										  cate: 'Statistics'
+										  detail: 'Patient Input Comment',
+										  cate: 'State Location Confirmation'
 									},
 									{
-										  taskName: 'Algebra',
+										  taskName: 'Age Declaration',
 										  rate: 2,
 										  id: Date.now(),
-										  detail: '',
-										  cate: 'Algebra'
+										  detail: 'Patient Input Comment',
+										  cate: 'Age Declaration'
 									},
 									{
-										  taskName: 'Geometry',
+										  taskName: 'Health Issue Descriptionn',
 										  rate: 4,
 										  id: Date.now(),
-										detail: '',
-										cate: 'Geometry'
+										detail: 'Patient Input Comment',
+										cate: 'Health Issue Description'
 									},
 								],
 								subTaskCateList: [
-									{ value: "Statistics", text: "Statistics" },
-									{ value: "Algebra", text: "Algebra" },
-									{ value: "Geometry", text: "Geometry" },
+									{ value: "State Location Confirmation", text: "State Location Confirmation" },
+									{ value: "Age Declaration", text: "Age Declaration" },
+									{ value: "Health Issue Descriptionn", text: "Health Issue Descriptionn" },
 								]
 							}
 						]
@@ -154,7 +154,7 @@
 
 				let temp = tempObj.range[0] || {}
 				this.value = temp.text
-				let nameList = ['Statistics', 'Algebra', 'Geometry']
+				let nameList = ['State Location Confirmation', 'Age Declaration', 'Health Issue Descriptionn']
 				let scoreList = [3,2,4]
 				
 				this.getServerData(nameList, scoreList)
@@ -272,11 +272,11 @@
 				generateFn() {
 					const obj = {
 					  result: '60%',
-					  taskName: 'Mathematics',
+					  taskName: 'Telehealth Consent Session',
 					  secordTask: [
-					    { taskName: 'Statistics', result: 3 },
-					    { taskName: 'Algebra', result: 2 },
-					    { taskName: 'Geometry', result: 4 }
+					    { taskName: 'State Location Confirmation', result: 3 },
+					    { taskName: 'Age Declaration', result: 2 },
+					    { taskName: 'Health Issue Description', result: 4 }
 					  ]
 					};
 					const xmlString = convertToXML(obj)
@@ -287,17 +287,17 @@
 					
 					const obj = {
 					  result: '60%',
-					  taskName: 'Mathematics',
+					  taskName: 'Telehealth Consent Session',
 					  secordTask: [
-					    { taskName: 'Statistics', result: 3 },
-					    { taskName: 'Algebra', result: 2 },
-					    { taskName: 'Geometry', result: 4 }
+					    { taskName: 'State Location Confirmation', result: 3 },
+					    { taskName: 'Age Declaration', result: 2 },
+					    { taskName: 'Health Issue Description', result: 4 }
 					  ]
 					};
 					const xmlString = convertToXML(obj)
 					
 					let environment = plus.android.importClass("android.os.Environment");
-					var sdRoot = environment.getExternalStorageDirectory(); //文件夹根目录  
+					var sdRoot = environment.getExternalStorageDirectory(); 
 					
 					let path = sdRoot + '/task.xml'
 					
